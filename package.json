@@ -17,6 +17,6 @@
   "author": "lsyiverson",
   "dependencies": {
     "express": "^4.13.1",
-    "hashtable": "^1.0.3"
+    "node-hashtable": "^0.1.1"
   }
 }

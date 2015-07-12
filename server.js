@@ -1,9 +1,9 @@
 var express = require('express')
-var hashtable = require('hashtable')
+var beaconHashtable = require('node-hashtable')
 var beacons = require('./beacons.json')
 var app = express()
 
-var datas = new hashtable()
+
 function createBeacon(uuid, content) {
   return {
     uuid: uuid,
@@ -12,14 +12,14 @@ function createBeacon(uuid, content) {
 }
 
 beacons.forEach(function(beacon) {
-  datas.put(beacon.uuid, createBeacon(beacon.uuid, beacon.content))
+  beaconHashtable.set(beacon.uuid, createBeacon(beacon.uuid, beacon.content))
 })
 
 app.get('/:uuid', function (req, res) {
   var uuid = req.params.uuid
-  var beaconInfo = datas.get(uuid)
+  var beaconInfo = beaconHashtable.get(uuid)
   if (beaconInfo) {
-    res.send(datas.get(uuid))
+    res.send(beaconHashtable.get(uuid))
   } else {
     res.status(404).send('Can\'t find the ' + uuid + ' beacon')
   }
