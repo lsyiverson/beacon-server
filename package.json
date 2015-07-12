@@ -1,0 +1,7 @@
+{
+  "name":"beacon-server",
+  "main":"server.js",
+  "dependencies":{
+    "express": "lastest"
+  }
+}
