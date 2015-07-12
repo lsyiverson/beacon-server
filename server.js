@@ -3,16 +3,8 @@ var beaconHashtable = require('node-hashtable')
 var beacons = require('./beacons.json')
 var app = express()
 
-
-function createBeacon(uuid, content) {
-  return {
-    uuid: uuid,
-    content: content
-  }
-}
-
 beacons.forEach(function(beacon) {
-  beaconHashtable.set(beacon.uuid, createBeacon(beacon.uuid, beacon.content))
+  beaconHashtable.set(beacon.uuid, beacon)
 })
 
 app.get('/:uuid', function (req, res) {
