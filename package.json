@@ -1,7 +1,22 @@
 {
-  "name":"beacon-server",
-  "main":"server.js",
-  "dependencies":{
-    "express": "lastest"
+  "name": "beacon-server",
+  "version": "1.0.0",
+  "description": "a demo server for iBeacon",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsyiverson/beacon-server.git"
+  },
+  "keywords": [
+    "iBeacon"
+  ],
+  "author": "lsyiverson",
+  "dependencies": {
+    "express": "^4.13.1",
+    "hashtable": "^1.0.3"
   }
 }

@@ -1,0 +1,10 @@
+[
+  {
+    "uuid":"123456",
+    "content":"first beacon"
+  },
+  {
+    "uuid":"654321",
+    "content":"second beacon"
+  }
+]
